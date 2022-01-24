@@ -6,6 +6,20 @@ import java.util.Arrays;
 
 public class Main {
 
+    public static void main(String[] args) {
+        printIsleapYear(2013);
+        printRecommendation(0, 2013);
+        System.out.println();
+        deliveryDays (14);
+        System.out.println("Для доставки требуется " + deliveryDays( 14) + " дней");
+        searchDuplicates ("aabccddefgghiijjkk");
+        int [] arr = {3, 2, 1, 6, 5};
+        changesArray(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println();
+
+    }
+
     // task1
     public static void leapYear(int year) {
         boolean leapYear = isleapYear(year);
@@ -24,19 +38,6 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) {
-        printIsleapYear(2013);
-        printRecommendation(0, 2013);
-        System.out.println();
-        deliveryDays (14);
-        System.out.println("Для доставки требуется " + deliveryDays( 14) + " дней");
-        searchDuplicates ("aabccddefgghiijjkk");
-        int [] arr = {3, 2, 1, 6, 5};
-        changesArray(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println();
-
-    }
     //task 2
 
     public static void printRecommendation(int clientOS, int deviceYear) {
@@ -92,9 +93,6 @@ public class Main {
             arr[first++] = arr [last];
             arr[last--] = temp;
         }
-
-
-
     }
     }
 
