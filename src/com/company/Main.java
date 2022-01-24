@@ -1,6 +1,8 @@
 package com.company;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 public class Main {
 
@@ -28,6 +30,11 @@ public class Main {
         System.out.println();
         deliveryDays (14);
         System.out.println("Для доставки требуется " + deliveryDays( 14) + " дней");
+        searchDuplicates ("aabccddefgghiijjkk");
+        int [] arr = {3, 2, 1, 6, 5};
+        changesArray(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println();
 
     }
     //task 2
@@ -61,6 +68,34 @@ public class Main {
         }
         return days;
     }
-}
+
+    //task4
+    public static void searchDuplicates(String text) {
+        char [] letters = text.toCharArray();
+        char prevChar = Character.MAX_VALUE;
+        for (char letter : letters) {
+            if (letter == prevChar) {
+                System.out.println("Найден дубль по символу " +letter);
+                return;
+            }
+            prevChar = letter;
+            }
+        System.out.println("Дублей не найдено");
+        }
+
+    //task5
+    public static void changesArray(int[] arr) {
+        int first = 0;
+        int last =arr.length -1;
+        while(first < last) {
+            int temp = arr[first];
+            arr[first++] = arr [last];
+            arr[last--] = temp;
+        }
+
+
+
+    }
+    }
 
 
